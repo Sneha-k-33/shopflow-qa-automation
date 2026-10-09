@@ -1,3 +1,5 @@
+# utils/test_data.py
+
 VALID_USER = {
     "username": "standard_user",
     "password": "secret_sauce",
@@ -19,9 +21,12 @@ PARTIAL_USER = {
 }
 
 def validate_user(user):
-    if user == VALID_USER:
+    # Using 'and' logic to check conditions
+    if not user["username"] and not user["password"]:
+        return "Empty credentials"
+    elif user["username"] == "standard_user" and user["password"] == "secret_sauce":
         return "Valid user"
-    elif user == INVALID_USER:
-        return "Invalid user"
+    elif user["username"] and not user["password"]:
+        return "Partial credentials"
     else:
-        return "Unknown user"
+        return "Invalid user"
