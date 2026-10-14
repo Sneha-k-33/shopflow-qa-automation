@@ -35,3 +35,21 @@ The project additionally includes experiments with AI-assisted test generation t
 ```text
 tests/test_data_validation.py PASSED [100%]
 ============================== 6 passed in 0.29s ==============================
+
+### Day 3 — Python Functions & Order Lifecycle Model
+
+**What I Learned**
+* Implemented reusable Python functions with parameters and return values.
+* Manipulated complex nested dictionaries and lists representing e-commerce order models.
+* Performed list iteration and math aggregations using generator expressions (`sum(...) for item in items`).
+* Managed order state transitions with business rule dictionaries.
+* Applied Pytest fixtures (`@pytest.fixture`) to supply clean test data across multiple test functions.
+
+**What I Built**
+* `utils/order_model.py` — Core order logic including `calculate_order_total()` (handling 8% tax and optional discounts), `validate_order()`, and `update_order_status()`.
+* `tests/test_order_model.py` — Comprehensive unit test suite using fixtures to validate calculation accuracy, field validation rules, and status transitions.
+
+**Test Results**
+```text
+collected 12 items
+============================== 12 passed in 0.04s ==============================
