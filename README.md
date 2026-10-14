@@ -53,3 +53,20 @@ tests/test_data_validation.py PASSED [100%]
 ```text
 collected 12 items
 ============================== 12 passed in 0.04s ==============================
+
+### Day 4 — Exceptions, JSON & File I/O
+
+**What I Learned**
+* Externalized test data from Python code into modular JSON configuration files (`users.json`, `products.json`, `payments.json`).
+* Implemented defensive programming using `try`, `except`, and `finally` exception handling blocks.
+* Handled specific runtime errors such as `FileNotFoundError` and `json.JSONDecodeError`.
+* Validated exception-throwing test cases using Pytest's `pytest.raises()`.
+
+**What I Built**
+* `utils/file_reader.py` — Reusable utility function `load_json_data()` providing safe file reading and resource cleanup.
+* `tests/test_file_reader.py` — Unit test suite validating successful JSON parsing across multiple domains and ensuring proper exception raising for missing files.
+
+**Test Results**
+```text
+collected 16 items
+============================== 16 passed in 0.04s ==============================
