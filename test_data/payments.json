@@ -1,0 +1,12 @@
+{
+  "valid_card": {
+    "number": "test_card_1234",
+    "expiry": "12/30",
+    "cvv": "123"
+  },
+  "declined_card": {
+    "number": "test_card_declined",
+    "expiry": "01/28",
+    "cvv": "999"
+  }
+}
