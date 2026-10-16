@@ -124,3 +124,36 @@ collected 28 items
 ============================== 28 passed in 0.05s ==============================
 
 ```
+
+## 🚀 Day 7 — First Real Browser Automation with Playwright
+
+### Overview
+Day 7 marks the exciting transition from testing pure Python logic and unit data to executing **real-world UI browser automation**. We integrated Microsoft Playwright with Pytest to automate an end-to-end user login workflow on the SauceDemo practice e-commerce application.
+
+### 🛠️ What We Built
+* **`tests/ui/`** — A dedicated directory structure to house all browser-based UI automation test suites.
+* **`tests/ui/test_login.py`** — An end-to-end UI automation test validating the SauceDemo login and inventory navigation flow.
+
+### 💻 Key Code Implementation (`tests/ui/test_login.py`)
+```python
+import pytest
+from playwright.sync_api import Page, expect
+
+@pytest.mark.ui
+@pytest.mark.smoke
+def test_saucedemo_login_success(page: Page):
+    """
+    Verify successful login to SauceDemo and transition to the Products inventory page.
+    Flow: Open website -> Login with standard credentials -> Verify Products page
+    """
+    # 1. Open website
+    page.goto("[https://www.saucedemo.com/](https://www.saucedemo.com/)")
+    
+    # 2. Login (Enter username, password, and click login)
+    page.fill("#user-name", "standard_user")
+    page.fill("#password", "secret_sauce")
+    page.click("#login-button")
+    
+    # 3. Verify Products page (Check URL and page header title)
+    expect(page).to_have_url("[https://www.saucedemo.com/inventory.html](https://www.saucedemo.com/inventory.html)")
+    expect(page.locator(".title")).to_have_text("Products")
