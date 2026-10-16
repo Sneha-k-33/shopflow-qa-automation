@@ -283,5 +283,8 @@ tests\ui\test_cart.py ..                                                      [1
 ======================================== 2 passed in 10.46s ========================================
 
 
+Day 12 — Checkout Workflow Automation & E2E TestingWhat I LearnedOrchestrating a complete End-to-End (E2E) user journey across multiple connected page objects (Login $\rightarrow$ Products $\rightarrow$ Cart $\rightarrow$ Checkout).Automating form inputs, continuing through overview summaries, and validating order success screens.Implementing robust negative test scenarios for missing mandatory input fields using Pytest parametrization.What I Builtpages/checkout_page.py — Page object managing customer information fields, continue/finish actions, error message containers, and order summary totals.tests/ui/test_checkout.py — A comprehensive E2E test suite covering successful order placement and parameterized form validation checks for missing first names, last names, and postal codes.Test ResultsPlaintexttests\ui\test_checkout.py ....                                                [100%]
+======================================== 4 passed in 14.22s ========================================
+
 
 
