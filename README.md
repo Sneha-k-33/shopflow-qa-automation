@@ -208,3 +208,31 @@ tests\ui\test_shopflow_ui.py ...                                              [1
 ======================================== 3 passed in 35.55s ========================================
 
 ```
+
+Day 9 — Page Object Model (POM) Refactoring
+What I Learned
+
+The Page Object Model (POM) architectural design pattern used by enterprise QA automation engineers.
+
+How to decouple test logic from UI element selectors and action code to maximize maintainability.
+
+Utilizing Python class inheritance (BasePage) to share core browser capabilities across multiple page classes.
+
+Encapsulating page-specific elements in constructors (__init__) and organizing actions into domain-specific methods (e.g., login(), add_product_to_cart()).
+
+What I Built
+
+pages/login_page.py — Page object handling SauceDemo authentication elements and actions.
+
+pages/products_page.py — Page object managing the inventory catalog, product selection, and cart navigation.
+
+pages/cart_page.py — Page object validating shopping cart items and checkout transitions.
+
+tests/ui/test_shopflow_pom.py — Clean, readable E-commerce UI test suite utilizing the new page objects.
+
+Test Results
+
+Plaintext
+tests\ui\test_shopflow_pom.py ..                                              [100%]
+======================================== 2 passed in 12.07s ========================================
+
