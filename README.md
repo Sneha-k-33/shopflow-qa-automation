@@ -236,3 +236,28 @@ Plaintext
 tests\ui\test_shopflow_pom.py ..                                              [100%]
 ======================================== 2 passed in 12.07s ========================================
 
+Day 10 — Product Catalog Automation & Dynamic Sorting
+What I Learned
+
+How to extract dynamic lists of text from multiple elements using Playwright's .all_inner_texts().
+
+Programmatic data transformation (parsing currency strings like "$29.99" into floats) to verify numerical sort order.
+
+Automating native HTML <select> dropdown filters using .select_option().
+
+Scoping element interactions using parent containers (has_text) to target specific grid items accurately.
+
+What I Built
+
+Enhanced pages/products_page.py with data extraction (get_product_names, get_product_prices), dropdown sorting, and catalog-level cart addition methods.
+
+tests/ui/test_products.py — A comprehensive E-commerce UI test suite covering product catalog display, price/name validation, detail view navigation, dynamic sorting (lohi, za), and cart interaction states.
+
+Test Results
+
+Plaintext
+tests\ui\test_products.py ...                                                 [100%]
+======================================== 3 passed in 8.67s ========================================
+
+
+
