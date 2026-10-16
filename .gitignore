@@ -28,3 +28,8 @@ allure-report/
 .DS_Store
 Thumbs.db
 
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+*.pyc
