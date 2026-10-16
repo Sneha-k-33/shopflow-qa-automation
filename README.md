@@ -157,3 +157,54 @@ def test_saucedemo_login_success(page: Page):
     # 3. Verify Products page (Check URL and page header title)
     expect(page).to_have_url("[https://www.saucedemo.com/inventory.html](https://www.saucedemo.com/inventory.html)")
     expect(page.locator(".title")).to_have_text("Products")
+
+    Here is the README content for Day 7 and Day 8 formatted precisely as requested:
+
+---
+
+### Day 7 — First Real Browser Automation with Playwright
+
+**What I Learned**
+
+* Core browser automation fundamentals using Microsoft Playwright.
+* Integrating Pytest with the `pytest-playwright` plugin for automatic browser fixture management.
+* Executing tests in headless mode (default) vs. headed mode (`--headed`) for visual debugging.
+* Automating real-world user workflows on the SauceDemo e-commerce application.
+
+**What I Built**
+
+* `tests/ui/` — Dedicated directory for browser-based UI automation tests.
+* `tests/ui/test_login.py` — End-to-end UI automation test covering website navigation, standard credential authentication, and inventory page validation.
+
+**Test Results**
+
+```text
+tests\ui\test_login.py .                                                     [100%]
+======================================== 1 passed in 6.28s =========================================
+
+```
+
+---
+
+### Day 8 — Playwright Robust Locators & UI Test Suite
+
+**What I Learned**
+
+* Playwright's robust, user-facing locator strategies and their priority order (`get_by_role`, `get_by_label`, `get_by_text`, `get_by_test_id`, and generic `locator`).
+* How to avoid fragile, tightly-coupled XPath or CSS selectors that break during front-end refactoring.
+* Leveraging semantic locators to match how real users and screen readers interact with web elements.
+
+**What I Built**
+
+* Expanded UI test suite (`tests/ui/test_shopflow_ui.py` / `test_login.py`) incorporating robust locator patterns.
+* `test_valid_login` — Robust login flow utilizing placeholder and role locators.
+* `test_product_displayed` — Catalog verification ensuring products appear on screen using visible text locators.
+* `test_product_details` — Item detail navigation and price/description validation test.
+
+**Test Results**
+
+```text
+tests\ui\test_shopflow_ui.py ...                                              [100%]
+======================================== 3 passed in 35.55s ========================================
+
+```
