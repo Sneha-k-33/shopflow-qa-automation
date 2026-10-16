@@ -70,3 +70,57 @@ collected 12 items
 ```text
 collected 16 items
 ============================== 16 passed in 0.04s ==============================
+
+Here is the README update snippet for **Day 5**, formatted to match your structure:
+
+---
+
+### Day 5 — Python OOP & Page Object Model Foundation
+
+**What I Learned**
+
+* Mastered Object-Oriented Programming (OOP) fundamentals in Python (`class`, `object`).
+* Implemented initializer constructors (`__init__`) to automatically assign instance variables (such as `self.page`).
+* Encapsulated reusable browser actions and page behaviors into class methods.
+* Explored basic class inheritance (`super().__init__`) to structure parent and child page objects for the Page Object Model (POM) architecture.
+
+**What I Built**
+
+* `pages/base_page.py` — Foundational parent class (`BasePage`) designed to encapsulate core browser interactions and shared navigation methods for all future page objects.
+* `tests/test_base_page.py` — Unit test suite verifying class initialization, attribute assignment, and basic method inheritance.
+
+**Test Results**
+
+```text
+tests/test_base_page.py::test_base_page_initialization PASSED
+tests/test_base_page.py::test_inheritance_and_methods PASSED
+
+```
+
+Here is the README update snippet for **Day 6**, formatted to match your structure:
+
+---
+
+### Day 6 — Advanced Pytest, Unit Testing, Parametrization & Markers
+
+**What I Learned**
+
+* Discovered core Pytest orchestration concepts including automated test discovery and test execution output (`pytest -v`).
+* Mastered assertions (`assert`) for verifying equality, data types, strings, lists, and dictionary structures.
+* Implemented fixtures (`@pytest.fixture`) and shared them globally across test suites using `conftest.py`.
+* Automated data-driven test execution using `@pytest.mark.parametrize` to run a single test function across multiple datasets and boundary conditions.
+* Categorized and filtered test execution using custom markers (`@pytest.mark.smoke`, `@pytest.mark.payment`) configured via `pytest.ini`.
+
+**What I Built**
+
+* `pytest.ini` — Global configuration file defining test search paths, minimum versions, and custom test markers.
+* `tests/unit/` — Dedicated directory for isolating granular unit-level test suites.
+* `tests/unit/test_payment_unit.py` — Comprehensive unit test suite featuring standard assertions, curriculum-aligned exercises, and advanced parametrized boundary checks.
+
+**Test Results**
+
+```text
+collected 28 items
+============================== 28 passed in 0.05s ==============================
+
+```
