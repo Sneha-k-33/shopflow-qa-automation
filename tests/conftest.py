@@ -34,3 +34,21 @@ def db_connection_simulation():
     
     print("\n[TEARDOWN] Closing test database connection...")
     db_connection["status"] = "DISCONNECTED"
+
+
+# tests/conftest.py
+
+import pytest
+
+@pytest.fixture(scope="session")
+def browser_type_launch_args(browser_type_launch_args):
+    """
+    Configure global Playwright browser launch options.
+    - headless: False opens the browser UI window visibly.
+    - slow_mo: Adds a 1000ms (1 second) delay between every action so you can follow along.
+    """
+    return {
+        **browser_type_launch_args,
+        "headless": False,
+        "slow_mo": 1000,
+    }

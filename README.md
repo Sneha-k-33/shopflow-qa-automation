@@ -259,5 +259,29 @@ Plaintext
 tests\ui\test_products.py ...                                                 [100%]
 ======================================== 3 passed in 8.67s ========================================
 
+Day 11 — Cart Management, Validation & Slow-Mo Configuration
+What I Learned
+
+How to configure global browser launch options (like headed mode and slow_mo delay) inside tests/conftest.py using the browser_type_launch_args fixture for visual test debugging.
+
+Extracting dynamic cart badge counts and handling hidden elements safely using visibility checks.
+
+Scoping item validation and removals within multi-item cart tables using .filter(has_text=...).
+
+What I Built
+
+Updated tests/conftest.py with session-scoped global slow-mo configuration.
+
+Enhanced pages/cart_page.py with methods to retrieve cart counts, individual item quantities, prices as floats, and item removal actions.
+
+tests/ui/test_cart.py — A dedicated E-commerce UI test suite verifying item addition, counter synchronization, pricing/quantity accuracy, and cart item deletion.
+
+Test Results
+
+Plaintext
+tests\ui\test_cart.py ..                                                      [100%]
+======================================== 2 passed in 10.46s ========================================
+
+
 
 
