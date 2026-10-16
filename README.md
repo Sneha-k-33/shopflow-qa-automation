@@ -289,3 +289,27 @@ Day 12 — Checkout Workflow Automation & E2E TestingWhat I LearnedOrchestrating
 Day 13 — Complete UI Purchase: The Hero TestWhat I LearnedHow to design and execute a primary Hero Test—a master end-to-end integration test that simulates the core business-critical user path from start to finish.Orchestrating state persistence and verification across multiple connected page objects (LoginPage $\rightarrow$ ProductsPage $\rightarrow$ CartPage $\rightarrow$ CheckoutPage).Ensuring cross-module data integrity by verifying badge counts, individual item pricing, quantity matching, and order summary totals before committing an order.What I Builttests/ui/test_complete_purchase.py — The ShopFlow Hero Test validating the entire transaction lifecycle from login to order confirmation success messaging.Test ResultsPlaintexttests\ui\test_complete_purchase.py .                                          [100%]
 ======================================== 1 passed in 24.82s ========================================
 
+Day 14 — Framework Cleanup & Refactoring
+What I Learned
+
+Enterprise repository hygiene, separating local secrets from environment configuration templates using .env.example.
+
+Managing lockfiles and pinning dependencies using requirements.txt (pip freeze) for reproducible CI/CD execution.
+
+Conducting code audits and refactoring page objects (CartPage.verify_item_in_cart) to eliminate technical debt.
+
+Executing full-suite verification across unit tests, data readers, fixtures, and UI flows to guarantee high framework reliability.
+
+What I Built
+
+.env.example — Environment variable template defining BASE_URL, default credentials, and Playwright execution parameters (HEADLESS, SLOW_MO).
+
+requirements.txt — Dependency lockfile capturing framework dependencies (pytest, playwright, pytest-playwright).
+
+Refactored pages/cart_page.py — Restored verify_item_in_cart validation method to ensure 100% test compatibility across all POM suites.
+
+Test Results
+
+Plaintext
+============================= 47 passed in 127.76s (0:02:07) =============================
+
