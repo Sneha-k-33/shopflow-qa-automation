@@ -14,7 +14,14 @@ def test_invalid_payment_amount():
     assert -1 <= 0
 
 
-# Parametrization: Run this single test function against 4 different data sets automatically!
+# Parametrization
+@pytest.mark.parametrize("amount", [100, 200, 500])
+def test_positive_payment_amount(amount):
+    """Verify positive payment amounts from curriculum exercise."""
+    assert amount > 0
+
+
+# Advanced Boundary Parametrization
 @pytest.mark.payment
 @pytest.mark.parametrize("amount, expected_valid", [
     (150.00, True),
